@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 String txtPass = objPass.getText().toString();
 
                 if (txtPhone.equals("900") && txtPass.equals("123")) {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Login Fail", Toast.LENGTH_LONG).show();

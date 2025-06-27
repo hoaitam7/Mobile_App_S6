@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cart_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Header: nút back + tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:tint="#388E3C"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvCartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Cart"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#388E3C"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Danh sách sản phẩm -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Offers / Coupons -->
+    <LinearLayout
+        android:id="@+id/layoutOffers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Avail Offers/ Coupons"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:tint="#888888" />
+
+    </LinearLayout>
+
+    <!-- Tổng tiền -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/tvItemAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Amount: $0.00"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discount: $0.00"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Amount: $0.00"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Nút Shipping -->
+    <Button
+        android:id="@+id/btnShipping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shipping"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#388E3C"
+        android:textColor="@android:color/white" />
+</LinearLayout>

@@ -3,10 +3,9 @@ package com.example.myapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
-
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -30,6 +29,16 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ivUser bat su kien nút UserInfor
+        ImageView ivUser = findViewById(R.id.ivUser);
+        ivUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, UserInforActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
