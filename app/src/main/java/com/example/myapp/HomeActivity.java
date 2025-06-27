@@ -39,6 +39,17 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //ivCart bat su kien sang CartActivity
+        ImageView ivCart = findViewById(R.id.ivCart);
+        ivCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }

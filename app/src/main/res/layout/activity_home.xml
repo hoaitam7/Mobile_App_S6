@@ -22,16 +22,35 @@
             android:background="@android:drawable/editbox_background"
             android:layout_marginBottom="16dp" />
 
-        <!-- Categories -->
-        <ImageView
-            android:id="@+id/ivUser"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:contentDescription="User Icon"
-            android:padding="4dp"
-            android:src="@drawable/ic_user"
-            android:tint="#000000" />
+        <!-- Hàng chứa icon User và Cart -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EDE7F6">
 
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_shopping_cart_24"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Cart Icon"
+                android:tint="#000000" />
+
+            <ImageView
+                android:id="@+id/ivUser"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_user"
+                android:contentDescription="User Icon"
+                android:tint="#000000" />
+        </LinearLayout>
+
+        <!-- Danh mục -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,29 +69,25 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <Button android:text="Áo"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Áo" />
+                    android:layout_height="wrap_content" />
 
-                <Button
+                <Button android:text="Quần"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Quần" />
+                    android:layout_height="wrap_content" />
 
-                <Button
+                <Button android:text="Giày"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Giày" />
+                    android:layout_height="wrap_content" />
 
-                <Button
+                <Button android:text="Túi"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Túi" />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- Product List -->
+        <!-- Sản phẩm nổi bật -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
